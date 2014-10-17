@@ -9,11 +9,11 @@ function Plane(name) {
 }
 
 Airport.prototype.land = function(plane) {
-  
-  if(this.planes.indexOf(plane)==-1)
+  var notFound = -1
+  if(this.planes.indexOf(plane)== notFound)
   this.planes.push(plane); 
 else
-  return false
+  return 'This plane has already landed';
   
 };
 

@@ -35,18 +35,18 @@ describe('Airport', function () {
     airport.takeOff(plane)
     expect(airport.planes).toEqual([])
 
-
   });
 
   it('does not land the same plane twice', function () {
     airport.land(plane)
     airport.land(plane)
     expect(airport.planes).toEqual([plane])
+    });
 
+  it('reports if the same plane lands twice', function () {
+    airport.land(plane)
+    expect(airport.land(plane)).toEqual('This plane has already landed')
 
   });
 
-
-
 });
-
