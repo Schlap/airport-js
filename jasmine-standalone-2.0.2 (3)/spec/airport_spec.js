@@ -3,7 +3,7 @@ describe('Airport', function () {
   beforeEach(function(){
 
     airport = new Airport
-    plane = new Plane
+    plane = new Plane('James')
 
   });
 
@@ -20,13 +20,6 @@ describe('Airport', function () {
      airport.land(jumbo)
      airport.land(boeing)
      expect(airport.planes).toEqual([jumbo, boeing])
-
-  });
-
-  xit('can not land the same plane twice', function(){
-    airport.land(plane)
-    airport.land(plane)
-    expect(airport.planes).toEqual('This plane has already landed')
 
   });
 
@@ -49,4 +42,27 @@ describe('Airport', function () {
 
   });
 
+  it('chooses which plane takes off', function () {
+    jumbo = new Plane('jumbo')
+    boeing = new Plane('boeing')
+    airport.land(jumbo)
+    airport.land(boeing)
+    airport.takeOff(jumbo)
+    expect(airport.planes).toEqual([boeing])
+
+
+  });
+
+
+  describe('Plane', function () {
+
+    it('can have a name', function () {
+
+      expect(plane.name).toEqual('James')
+
+    });
+
+  });
+
 });
+

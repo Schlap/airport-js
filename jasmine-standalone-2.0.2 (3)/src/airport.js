@@ -18,5 +18,6 @@ else
 };
 
 Airport.prototype.takeOff = function(plane) {
-  this.planes.pop(plane);
+  this.planes.splice(plane, 1)
+
 };
