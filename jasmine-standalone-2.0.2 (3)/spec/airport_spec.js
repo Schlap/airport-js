@@ -7,6 +7,7 @@ describe('Airport', function () {
 
   });
 
+
   it('is empty', function () {
 
     expect(airport.planes).toEqual([])
@@ -37,4 +38,15 @@ describe('Airport', function () {
 
   });
 
+  it('does not land the same plane twice', function () {
+    airport.land(plane)
+    airport.land(plane)
+    expect(airport.planes).toEqual([plane])
+
+
+  });
+
+
+
 });
+

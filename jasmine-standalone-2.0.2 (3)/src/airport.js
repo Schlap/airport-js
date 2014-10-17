@@ -1,16 +1,22 @@
 function Airport() {
 
-this.planes = []
+this.planes = [];
 
 }
 
-function Plane() {}
+function Plane(name) {
+  this.name = name;
+}
 
 Airport.prototype.land = function(plane) {
-  this.planes.push(plane) 
+  
+  if(this.planes.indexOf(plane)==-1)
+  this.planes.push(plane); 
+else
+  return false
   
 };
 
 Airport.prototype.takeOff = function(plane) {
-  this.planes.pop(plane)
+  this.planes.pop(plane);
 };
