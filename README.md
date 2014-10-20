@@ -1,1 +1,1 @@
-A javascript simulation of an airport
+A javascript simulation of an airport using jasmine testing tool.
