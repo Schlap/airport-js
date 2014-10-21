@@ -1,1 +1,1 @@
-A javascript simulation of an airport using jasmine testing tool.
+A javascript simulation of an airport using jasmine for test driven development.
